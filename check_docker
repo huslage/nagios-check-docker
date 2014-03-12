@@ -10,6 +10,10 @@ import argparse
 	Defines all metrics from docker_info that are numbers with context names that equal
 	their names out of the API.
 
+	This plugin should be rather immune to changes in the underlying Docker API. If
+	things are added to info(), the plugin doesn't have to be updated immediately to pull 
+	in new identifiers but can be controlled via commandline arguments. 
+
 '''
 class Docker(nagiosplugin.Resource):
 	def __init__(self, url):
@@ -75,7 +79,7 @@ def main():
 		DockerSummary(),
 		nagiosplugin.ScalarContext('service', '0', '0'))
 
-	# Add our metric checks
+	# Add our metric checks (totally positional in the list, need to add identifiers)
 	for i in metrics:
 		check.add(nagiosplugin.ScalarContext(i[0],i[1],i[2],fmt_metric=''))
 
