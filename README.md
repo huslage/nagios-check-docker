@@ -41,6 +41,8 @@ define command{
 
 If you want to use the http interface, simply add `--url http://127.0.0.1:4243` to the end of the command_line. Feel free to use the plugin remotely by using the URL of the host where docker is running.
 
+You will then need to add a host check for the appropriate host or group to use the command.
+
 #### Plugin Options
 
 The plugin automatically checks that the docker service is reachable and gathers these performance metrics:
