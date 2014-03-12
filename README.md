@@ -6,6 +6,7 @@ The plugin is designed to be forward-compatible. If the data returned by the API
 
 ### Requirements
 * Python
+* Pip
 * Nagios 3+
 * docker-py
 * nagiosplugin
