@@ -78,7 +78,7 @@ def main():
 	check = nagiosplugin.Check(
 		Docker(args.url),
 		DockerSummary(),
-		nagiosplugin.ScalarContext('service', '0', '0'))
+		nagiosplugin.ScalarContext('service', '0', '0',fmt_metric=''))
 
 	# Add our metric checks (totally positional in the list, need to add identifiers)
 	for i in metrics:
