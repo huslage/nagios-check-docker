@@ -51,6 +51,7 @@ def main():
 	args.add_argument('-m', '--metric', nargs=3, action='append', help='<metric name> <warning> <critical>')
 
 	# Defaults for metrics we know about. Can be overridden with -m/--metric option
+	# Add any new metrics, or change default thresholds here. 
 	metrics = [ 
 		['Containers',0,0],
 		['Debug',0,0],
